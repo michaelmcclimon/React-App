@@ -12,14 +12,16 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-          class HelloMessage extends React.Component { render() { return {
-      <div>  Hello, {this.props.name}!
-        </div>
-      } } }
-        ReactDOM.render(
-          <h1><HelloMessage name="Mickey" /> </h1>, //Dom needs to be in body.
-          document.getElementById("root")
-        );
+      class HelloMessage extends React.Component {
+        render() {
+          return <div>Hello {this.props.name}</div>;
+        }
+      }
+
+      ReactDOM.render(
+        <HelloMessage name="Michael McClimon" />,
+        document.getElementById("hello-example")
+      );
     </script>
 
     // Adding in JSX exercise
