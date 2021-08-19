@@ -11,12 +11,15 @@
   </head>
   <body>
     <div id="root"></div>
-
     <script type="text/babel">
-      ReactDOM.render(
-        <h1>Hello, Michael McClimon!!</h1>, //Dom needs to be in body.
-        document.getElementById("root")
-      );
+          class HelloMessage extends React.Component { render() { return {
+      <div> Hello, {this.props.name}!
+        </div>
+      } } }
+        ReactDOM.render(
+          <h1><HelloMessage name="Mickey" /> </h1>, //Dom needs to be in body.
+          document.getElementById("root")
+        );
     </script>
 
     // Adding in JSX exercise
