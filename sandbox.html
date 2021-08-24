@@ -10,21 +10,22 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <ul id="root"></ul>
     <script type="text/babel">
       React.createElement("label", {
         for: "name-field",
       });
-
       class HelloMessage extends React.Component {
         render() {
-          return;
-          <div>Hello {this.props.name}</div>;
+          return <li> Hello {this.props.name}</li>;
         }
       }
 
       ReactDOM.render(
-        <HelloMessage name="Mr. Michael McClimon" />,
+        <React.Fragment>
+          <HelloMessage name="Michael McClimon" />
+          <HelloMessage name="Zslot" />
+        </React.Fragment>,
         document.getElementById("root")
       );
     </script>
