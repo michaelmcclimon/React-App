@@ -14,7 +14,13 @@
     <script type="text/babel">
       class HelloMessage extends React.Component {
         render() {
-          return <div>Hello {this.props.name}</div>;
+          return;
+          <div>
+            <label for="name-field" class="mr-auto">
+              Name:{" "}
+            </label>
+            Hello {this.props.name}
+          </div>;
         }
       }
 
